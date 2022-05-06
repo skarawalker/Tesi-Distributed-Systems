@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.apache.spark.api.java.JavaSparkContext"/>
+    <fullyQualifiedTypeName name="org.apache.spark.SparkConf"/>
+    <fullyQualifiedTypeName name="org.apache.spark.api.java.JavaPairRDD"/>
+    <fullyQualifiedTypeName name="scala.Tuple2"/>
+    <fullyQualifiedTypeName name="org.apache.spark.streaming.Durations"/>
+    <fullyQualifiedTypeName name="org.apache.spark.streaming.api.java.JavaStreamingContext"/>
+    <fullyQualifiedTypeName name="org.apache.spark.api.java.StorageLevels"/>
+</qualifiedTypeNameHistroy>

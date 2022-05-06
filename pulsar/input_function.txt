@@ -1,0 +1,10 @@
+/pulsar/bin/pulsar-admin functions create \
+  --jar target/my-jar-with-dependencies.jar \
+  --classname org.example.functions.WordCountFunction \
+  --tenant public \
+  --namespace default \
+  --name word-count \
+  --inputs persistent://public/default/sentences \
+  --output persistent://public/default/count
+
+/pulsar/bin/pulsar-admin functions create --jar /opt/pulsar-data/PulsarFunction.jar --classname PulsarFunction --tenant public --namespace default --name word-count --inputs persistent://public/default/sentences --output persistent://public/default/count

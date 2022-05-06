@@ -1,0 +1,16 @@
+AVVIO SERVER PER MESSAGGI:
+nc -l -vv -p <port>
+nc -l -vv -p 9000
+
+CARTELLA DI FLINK:
+/usr/local/flink 
+
+CARTELLA DATI:
+/opt/flink-data
+
+ESEGUIRE JOB:
+cd /usr/local/flink
+./bin/flink run --class <classname> /opt/flink-data/<nomefile>.jar <arguments>
+./bin/flink run --class MyWordCount /opt/flink-data/MyWordCount.jar --hostname 172.22.0.4 --port 9000
+
+LOCALHOST IP: 172.22.0.4

@@ -1,0 +1,25 @@
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+
+import scala.Tuple2;
+
+import java.util.Arrays;
+
+public final class MyWordCount {
+
+  public static void main(String[] args) {
+	String appName = "MyWordCount";
+	String master = "spark://spark-master:7077";
+	SparkConf conf = new SparkConf().setAppName(appName).setMaster(master );
+	  try (JavaSparkContext sc = new JavaSparkContext(conf)) {
+		JavaRDD<String> textFile = sc.textFile("input.txt");
+		  JavaPairRDD<String, Integer> counts = textFile
+		      .flatMap(s -> Arrays.asList(s.split(" ")).iterator())
+		      .mapToPair(word -> new Tuple2<>(word, 1))
+		      .reduceByKey((a, b) -> a + b);
+		  counts.saveAsTextFile("word-count-result");
+	}
+  }
+}

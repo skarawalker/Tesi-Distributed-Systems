@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.stream.Collector"/>
+    <fullyQualifiedTypeName name="org.apache.flink.api.java.tuple.Tuple2"/>
+    <fullyQualifiedTypeName name="javax.xml.crypto.KeySelector"/>
+</qualifiedTypeNameHistroy>
