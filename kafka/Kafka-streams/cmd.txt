@@ -1,1 +1,0 @@
-kafka-console-producer --broker-list localhost:9092 --topic streamTopic1 --property parse.key=true --property key.separator=:
