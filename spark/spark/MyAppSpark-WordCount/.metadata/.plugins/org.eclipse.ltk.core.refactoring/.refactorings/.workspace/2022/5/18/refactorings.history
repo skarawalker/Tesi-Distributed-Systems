@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;mywordcount&apos;" deleteContents="false" description="Delete resource &apos;mywordcount&apos;" element1="/mywordcount" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1651498785909"/>&#x0A;<refactoring comment="Delete resource &apos;wordcountscala&apos;" deleteContents="false" description="Delete resource &apos;wordcountscala&apos;" element1="/wordcountscala" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1651502507456"/>
-</session>
