@@ -1,6 +1,0 @@
-/spark/bin/spark-submit \
-  --class MyWordCount \
-  --master spark://spark-master:7077 \
-  /opt/spark-data/MyWordCount.jar
-
-/spark/bin/spark-submit --class MyWordCount --master spark://spark-master:7077 /opt/spark-data/MyWordCount.jar
