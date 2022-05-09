@@ -35,6 +35,18 @@ services:
       - "SPARK_MASTER=spark://spark-master:7077"
     volumes: 
         - .:/opt/spark-data
+  spark-worker-3:
+    image: bde2020/spark-worker:3.1.1-hadoop3.2
+    container_name: spark-worker-3
+    depends_on:
+      - spark-master
+    ports:
+      - "8083:8081"
+      - "34040:4040"
+    environment:
+      - "SPARK_MASTER=spark://spark-master:7077"
+    volumes: 
+        - .:/opt/spark-data
   spark-history-server:
       image: bde2020/spark-history-server:3.1.1-hadoop3.2
       container_name: spark-history-server
