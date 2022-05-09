@@ -8,7 +8,11 @@ Prima di eseguire il codice è consigliato copiare il file log:
 ```
 cp /opt/spark-data/log4j.properties /spark/conf/log4j.properties
 ```
-Il file jar si trova nella cartella wordcout/out. Per avviarlo nel container si esegue il comando:
+Il file jar si trova nella cartella wordcout/out. Per avviare il servizio, aprire il terminale di uno dei 3 worker e scrivere il comando:
 ```
 /spark/bin/spark-submit --class MyWordCount --master spark://spark-master:7077 /opt/spark-data/wordcount.jar
+```
+Per inviare messaggi al servizio, aprire un altro terminale del worker e scrivere il comando:
+```
+nc -l -vv -9999
 ```
