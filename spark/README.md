@@ -14,5 +14,5 @@ Il file jar si trova nella cartella wordcout/out. Per avviare il servizio, aprir
 ```
 Per inviare messaggi al servizio, aprire un altro terminale del worker e scrivere il comando:
 ```
-nc -l -vv -p 9000
+nc -l -vv -p 9999
 ```
