@@ -45,7 +45,7 @@ public final class MyWordCount {
 		// Generate running word count
 		Dataset<Row> wordCounts = words.groupBy("value").count();
 
-		StreamingQuery query = lines.writeStream()
+		StreamingQuery query = wordCounts.writeStream()
 				.outputMode("update")
 				.format("console")
 				.trigger(Trigger.ProcessingTime("0 seconds"))
