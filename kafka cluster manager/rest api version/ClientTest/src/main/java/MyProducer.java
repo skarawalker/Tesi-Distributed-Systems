@@ -12,7 +12,9 @@ public class MyProducer {
     final static String adminAddress = "localhost:8080";
 
     public static void main(String[] args){
+        System.out.println("App creation");
         ApplicationManager app = new ApplicationManager(appName, topicName, adminAddress);
+        System.out.println("App connection");
         app.connect("0");
         setUp();
         Producer<Integer, String> producer = new org.apache.kafka.clients.producer.KafkaProducer<Integer, String>(props);

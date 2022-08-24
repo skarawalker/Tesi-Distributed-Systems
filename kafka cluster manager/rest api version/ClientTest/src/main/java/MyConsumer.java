@@ -17,7 +17,6 @@ public class MyConsumer {
 
     public static void main(String[] args){
         ApplicationManager app = new ApplicationManager(appName, topicName, adminAddress);
-        /*
         app.connect("0");
 
         //Config Parameters
@@ -56,8 +55,6 @@ public class MyConsumer {
                 app.updateOffset(record.offset());
             }
         }
-
-         */
     }
 
     private static void setUp() {

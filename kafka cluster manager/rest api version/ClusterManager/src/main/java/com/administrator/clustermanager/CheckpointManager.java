@@ -38,7 +38,7 @@ public class CheckpointManager extends Thread {
         try {
             fReader = new BufferedReader(new FileReader(checkpoints));
             String line = fReader.readLine();
-            if (line != null && line.charAt(0)=='[') {
+            if (line != null && line.charAt(0)=='[' && line.charAt(1)!=']') {
                 List<String> topics = parse(line.substring(1));
                 for (String t : topics) {
                     System.out.println(t);

@@ -10,12 +10,20 @@ public class AdminConnection {
 
     public AdminConnection() throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:5000/adminIp"))
+                .uri(URI.create("http://localhost:5000/adminPorts"))
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(responseHandler(response));
-        adminAddress = "";
+        String res = responseHandler(response);
+        if(res.charAt(0)=='[' && res.charAt(res.length()-2)==']' ){
+            res = res.substring(1,res.length()-2);
+            String adminPort = null;
+            for(String port: res.split(",")){
+                if(!port.contains("5000") || !port.contains("8080"))
+                    adminPort = port.substring(1, port.length()-1);
+            }
+            adminAddress = "localhost:"+adminPort;
+        }
     }
 
     /**
@@ -144,7 +152,9 @@ public class AdminConnection {
     private String responseHandler(HttpResponse<String> response){
         if(response.statusCode()==200)
             return response.body();
-        else {
+        else if(response.uri().toString().contains(":5000")) {
+            return "Error: "+response.body();
+        }else{
             String res = response.body().substring(response.body().indexOf("\"error"));
             return res.substring(9, res.indexOf(",")-1);
         }
