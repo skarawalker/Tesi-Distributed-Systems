@@ -1,6 +1,0 @@
-{
-  "stream1": {
-    "consumer1": 18
-    "app1": -1
-  }
-}
