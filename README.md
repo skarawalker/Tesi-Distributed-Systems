@@ -6,4 +6,5 @@ Il lavoro si divide in 3 parti:
 - **Anomaly Detection**, applicazione sviluppata in Python per lo studio delle statistiche dei container all'interno del cluster e cercare di individuare un'anomalia hardware tramite un algoritmo di machine learning.
 
 Nella cartella *Client Test* sono contenuti i codici di un semplice Consumer e Producer per testare il funzionamento del progetto.
+
 Nella cartella *Frameworks Exmaple* sono contenuti i codici di esemnpio di utilizzo di Apache Kafka, Apache Spark e di altri framework per lo sviluppo di applicazioni distribuite (pulsar e flink).
